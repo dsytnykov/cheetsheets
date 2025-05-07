@@ -54,6 +54,10 @@ git commit --amend --no-edit
 
 ## Undoing changes
 
+**removed changes from the repo but leave it locally**
+
+- git rm --cached -r design_patterns/.idea
+
 **good video https://www.youtube.com/watch?v=lX9hsdsAeTk**
 
 **Changes addded but not committed**
