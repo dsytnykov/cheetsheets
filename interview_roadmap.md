@@ -219,6 +219,12 @@
 
 - https://spring.io/guides/gs/spring-cloud-loadbalancer
 
+## Swagger
+
+- https://medium.com/@AlexanderObregon/understanding-the-hidden-annotation-in-spring-for-hiding-openapi-endpoints-e3a81a99161c
+
+## Actuator
+
 ## Testing
 
 - https://medium.com/@gaddamnaveen192/spring-boot-interview-prep-300-questions-and-real-world-challenges-explained-c1f5ab7bb4b1#3f94
