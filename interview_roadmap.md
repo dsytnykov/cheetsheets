@@ -24,6 +24,8 @@
 
   > https://medium.com/@pratik.941/understanding-generics-in-java-a-comprehensive-guide-afd437f413cf
 
+  > https://medium.com/javarevisited/understanding-java-generics-key-differences-between-super-t-and-extends-t-c51cb2bbcc8c
+
 - Optional
 
   > https://medium.com/@iamvivekojha/optional-class-in-java-everything-you-need-to-know-to-565454184248
@@ -165,6 +167,8 @@
 
   > https://abhishekvrshny.medium.com/pinning-a-pitfall-to-avoid-when-using-virtual-threads-in-java-482c5eab78a3
 
+  > https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html#GUID-704A716D-0662-4BC7-8C7F-66EE74B1EDAD
+
 ## NIO / IO
 
 > https://medium.com/@ujjawalr/java-nio-complete-tutorial-69c2c6a8d2a0
@@ -237,6 +241,8 @@
   > https://www.youtube.com/watch?v=Ybfo8Dwactg&list=PLSH12D6v2LcLjdsz5pEWLSZoPKy6NTMf-
 
 - Bean lifecycle
+
+> https://medium.com/@vino7tech/difference-between-filters-and-interceptors-in-spring-boot-852de6164d04
 
 ## Security
 
