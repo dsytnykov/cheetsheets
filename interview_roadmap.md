@@ -256,6 +256,8 @@
 
 > https://medium.com/javarevisited/spring-jpa-when-to-use-join-fetch-a6cec898c4c6
 
+> https://medium.com/@ujjawalr/lets-talk-jpa-but-not-the-usual-entity-id-and-onetomany-stuff-310ebb2f76bb
+
 ## Transactional
 
 - Propagation
@@ -380,7 +382,14 @@
 - Protocols
 
   - RESTful API
+
     > https://itsrorymurphy.medium.com/restful-apis-essential-concepts-for-developers-a48600e808c3
+
+    > https://www.youtube.com/watch?v=dZTkBeB_dmg - idempotency
+
+    > https://www.youtube.com/watch?v=7nm1pYuKAhY&list=PLSH12D6v2LcLjdsz5pEWLSZoPKy6NTMf-&index=27
+
+    > https://medium.com/@buzulan.petru/advanced-rest-api-design-and-best-practices-f419e496c018
 
 - Message Brokers
   - Kafka
