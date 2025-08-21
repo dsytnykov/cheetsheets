@@ -179,6 +179,8 @@
 
 > https://developer.ibm.com/tutorials/j-nio/ > https://medium.com/@trunghuynh/java-nio-microservice-networking-101-1222c5ff2760
 
+> https://dev.java/learn/modernio/
+
 ## Serialization / Deserialization
 
 ## Networking
@@ -300,6 +302,14 @@
 ## Testing
 
 > https://medium.com/@gaddamnaveen192/spring-boot-interview-prep-300-questions-and-real-world-challenges-explained-c1f5ab7bb4b1#3f94
+
+- Mockito, JUnit
+
+  > https://medium.com/@sharmapraveen91/deep-dive-into-junit-5-and-mockito-annotations-and-use-cases-3b170698f1b2
+
+  > https://medium.com/@AlexanderObregon/basics-of-mocking-dependencies-in-java-unit-tests-with-mockito-ddb689303d6c
+
+  > https://docs.junit.org/current/user-guide/
 
 ## Performance and proper using
 
