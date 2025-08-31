@@ -183,6 +183,12 @@
 
 ## Serialization / Deserialization
 
+> https://medium.com/tuanhdotnet/understanding-serialization-and-deserialization-methods-examples-and-best-practices-ff425425d693
+
+> https://medium.com/@salvipriya97/serialization-and-deserialization-explained-with-examples-5e2e45af97ee
+
+> https://medium.com/@ali.gelenler/serialization-deserialization-mechanisms-7cc37b6d948b
+
 ## Networking
 
 > https://medium.com/@AlexanderObregon/java-networking-basics-832150cc21c9
