@@ -186,7 +186,18 @@ during interective rebase choose for commit 'drop'
 
 ## Patch
 
-- git format-patch -<n> <rev> - create patch
+### Diff
+
+- git diff file1.c file2.c > my-changes.patch - creates a unified diff (.patch) of the selected files differences between your working directory and the index (staging area).
+- git diff > my-changes.patch - creates a unified diff (.patch) of the all differences between your working directory and the index (staging area).
+- git diff --cached file1.c file2.c > staged-changes.patch - include only staged changes (those you’ve added with git add)
+- git diff <commit1> <commit2> -- file1.c file2.c > selected-files.patch - if you just want a one-off patch file of specific commits and files
+- git apply my-changes.patch - to apply changes
+
+### Format patch - for committed changes
+
+- git format-patch -<n> <rev> - create patch for committed changes, each commit you specify becomes its own .patch file, it creates a file kind of 0001-Fix-typo-in-function-name.patch
+- git format-patch -1 HEAD -- file1.c file2.c - only includes specified files
 
 **For example:**
 
