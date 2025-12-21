@@ -1,4 +1,4 @@
-# Git instructions
+.gi# Git instructions
 
 ## Basic commands
 
@@ -16,11 +16,18 @@
 git add .
 git commit --amend --no-edit
 ```
+## Getting changes
+```git
+git pull --rebase - if works, you are done. If you have conflicts
+git rebase --abort
+AND
+git pull - and resolve conflicts
+```
 
 ## Working with branches
 
 - git branch - show list of local branches
-- git branch -d local-branch-name - remove local branchg
+- git branch -d local-branch-name - remove local branch
 - git branch -r - shows all remote branches
 - git branch -a - show all branches
 - git branch -vv or -vva - detailed info about branches
@@ -183,6 +190,11 @@ during interective rebase choose for commit 'drop'
 ## Stash
 
 - git stash -help - all necessary info about stash
+- git stash list - shows all stashes
+- git stash
+- git stash pop
+- git stash apply stash@{0} - apply stash
+- git stash pop stash@{0} - apply stash and remove it
 
 ## Patch
 
