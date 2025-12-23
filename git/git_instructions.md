@@ -200,11 +200,13 @@ during interective rebase choose for commit 'drop'
 
 ### Diff
 
+```git
 - git diff file1.c file2.c > my-changes.patch - creates a unified diff (.patch) of the selected files differences between your working directory and the index (staging area).
 - git diff > my-changes.patch - creates a unified diff (.patch) of the all differences between your working directory and the index (staging area).
 - git diff --cached file1.c file2.c > staged-changes.patch - include only staged changes (those you’ve added with git add)
 - git diff <commit1> <commit2> -- file1.c file2.c > selected-files.patch - if you just want a one-off patch file of specific commits and files
 - git apply my-changes.patch - to apply changes
+```
 
 ### Format patch - for committed changes
 
@@ -218,6 +220,19 @@ git format-patch -1 HEAD - The -1 flag indicates how many commits should be incl
 git am < file.patch - Apply the patch with the command:
 Alternatively you can also apply (should work on all OSes including Windows) with:
 git apply --verbose file.patch - The -v or --verbose will show what failed, if any. Giving you a clue on how to fix.
+```
+
+## Bisect
+
+- allows to find the commit that introduced a bug 
+
+```git
+git bisect start
+git bisect bad
+git bisect good <commit_id> 
+git bisect reset
+
+git show <commit_id> 
 ```
 
 ## Submodules
