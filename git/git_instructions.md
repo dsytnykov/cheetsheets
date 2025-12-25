@@ -40,10 +40,19 @@ git pull - and resolve conflicts
   **OR**
   git push <remote_name> :<branch_name>
 
+```git
 - git checkout master - change branch
-- git checkout -b custom - create branche and switch to that branch
+- git checkout -b custom - create branch and switch to that branch
 - git checkout - -back to previous branch (if forgot the name of the branch)
-- git checkout -b local_branch origin/remote_branch - switching to a remote branch throught creating a local branch, usually with the same name
+- git checkout -b local_branch origin/remote_branch - switching to a remote branch through creating a local branch, usually with the same name
+```
+
+```git
+git switch main
+git switch - //switch to previous branch
+git switch -c new-branch //create and switch to new branch
+git switch -c new-branch origin/remote-branch //create and switch to new branch from remote
+```
 
 - git push origin branchName - if local and remote branches have the same name
 - git push origin localBranch:removeBranch - if local and remote branches have different names
@@ -67,7 +76,7 @@ git pull - and resolve conflicts
 
 **good video https://www.youtube.com/watch?v=lX9hsdsAeTk**
 
-**Changes addded but not committed**
+**Changes added but not committed**
 
 - git reset file_name or git reset
 
