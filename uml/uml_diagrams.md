@@ -3,6 +3,7 @@
 This README serves as a comprehensive reference for creating UML diagrams that represent Java code using Mermaid. It covers basic to advanced UML concepts tailored specifically for Java developers.
 
 ## Table of Contents
+
 - [Mermaid Basics](#mermaid-basics)
 - [Class Representations](#class-representations)
   - [Regular Classes](#regular-classes)
@@ -65,7 +66,7 @@ classDiagram
         +Shape(String color)
         +String getColor()
         +void setColor(String color)
-        +double calculateArea()* 
+        +double calculateArea()*
     }
 ```
 
@@ -94,7 +95,7 @@ In Java, a class can extend another class. This is represented with a solid line
 classDiagram
     Animal <|-- Dog
     Animal <|-- Cat
-    
+
     class Animal {
         #String name
         +void makeSound()
@@ -117,7 +118,7 @@ When a class implements an interface, it's shown with a dashed line and an empty
 classDiagram
     Drawable <|.. Circle
     Drawable <|.. Rectangle
-    
+
     class Drawable {
         <<interface>>
         +void draw()
@@ -143,7 +144,7 @@ Represents a general relationship between classes:
 ```mermaid
 classDiagram
     Student -- Course : takes
-    
+
     class Student {
         -String name
     }
@@ -160,7 +161,7 @@ A special form of association where one class "has" another class but doesn't ow
 ```mermaid
 classDiagram
     University o-- Department : contains
-    
+
     class University {
         -String name
         +void addDepartment(Department dept)
@@ -178,7 +179,7 @@ A stronger form of aggregation where the contained class can't exist without the
 ```mermaid
 classDiagram
     Car *-- Engine : has
-    
+
     class Car {
         -String model
         +void start()
@@ -196,7 +197,7 @@ When one class uses another class temporarily but doesn't store it:
 ```mermaid
 classDiagram
     OrderProcessor ..> PaymentGateway : uses
-    
+
     class OrderProcessor {
         +void processOrder(Order order, PaymentGateway gateway)
     }
@@ -210,6 +211,7 @@ classDiagram
 ### Visibility Modifiers
 
 Mermaid uses symbols to denote visibility:
+
 - `+` : public
 - `-` : private
 - `#` : protected
@@ -253,7 +255,7 @@ classDiagram
         +T get(int index)
         +int size()
     }
-    
+
     class Pair~K,V~ {
         -K key
         -V value
@@ -286,17 +288,17 @@ classDiagram
         -int outerField
         +void outerMethod()
     }
-    class OuterClass$StaticNestedClass {
+    class OuterClassStaticNestedClass {
         -int nestedField
         +void nestedMethod()
     }
-    class OuterClass$InnerClass {
+    class OuterClassInnerClass {
         -int innerField
         +void innerMethod()
     }
-    
-    OuterClass +-- OuterClass$StaticNestedClass
-    OuterClass +-- OuterClass$InnerClass
+
+    OuterClass +-- OuterClassStaticNestedClass
+    OuterClass +-- OuterClassInnerClass
 ```
 
 ## Complete Examples
@@ -312,7 +314,7 @@ classDiagram
     Order *-- LineItem
     LineItem o-- Product
     Customer -- Order
-    
+
     class Product {
         <<abstract>>
         -String id
@@ -321,25 +323,25 @@ classDiagram
         +double getPrice()
         +String getName()
     }
-    
+
     class PhysicalProduct {
         -double weight
         -double dimensions
         +double getShippingCost()
     }
-    
+
     class DigitalProduct {
         -String downloadUrl
         -double fileSizeMB
         +String getDownloadLink()
     }
-    
+
     class Orderable {
         <<interface>>
         +boolean isInStock()
         +void addToOrder(Order order)
     }
-    
+
     class ShoppingCart {
         -List~Product~ items
         +void addProduct(Product p)
@@ -347,7 +349,7 @@ classDiagram
         +double getTotal()
         +Order checkout()
     }
-    
+
     class Order {
         -String orderId
         -Customer customer
@@ -357,13 +359,13 @@ classDiagram
         +double getTotal()
         +void process()
     }
-    
+
     class LineItem {
         -Product product
         -int quantity
         +double getSubtotal()
     }
-    
+
     class Customer {
         -String id
         -String name
@@ -381,7 +383,7 @@ classDiagram
     Observer <|.. ConcreteObserverA
     Observer <|.. ConcreteObserverB
     ConcreteSubject -- Observer
-    
+
     class Subject {
         <<abstract>>
         -List~Observer~ observers
@@ -389,23 +391,23 @@ classDiagram
         +void detach(Observer observer)
         +void notifyObservers()
     }
-    
+
     class Observer {
         <<interface>>
         +void update(Subject subject)
     }
-    
+
     class ConcreteSubject {
         -State state
         +State getState()
         +void setState(State state)
     }
-    
+
     class ConcreteObserverA {
         -State observerState
         +void update(Subject subject)
     }
-    
+
     class ConcreteObserverB {
         -State observerState
         +void update(Subject subject)
@@ -415,11 +417,8 @@ classDiagram
 ## Best Practices
 
 1. **Keep It Simple**: Only include essential classes and relationships to avoid overwhelming diagrams.
-   
 2. **Use Meaningful Names**: Choose descriptive names for classes, methods, and attributes.
-   
 3. **Group Related Classes**: Organize your diagram by placing related classes near each other.
-   
 4. **Add Notes When Needed**: Use notes to explain complex relationships or design decisions.
 
 5. **Consistent Notation**: Maintain consistent use of UML notation throughout your diagrams.
