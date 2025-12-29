@@ -297,8 +297,8 @@ classDiagram
         +void innerMethod()
     }
 
-    OuterClass +.. StaticNestedClass : static nested
-    OuterClass +-- InnerClass : inner
+    OuterClass *-- StaticNestedClass
+    OuterClass *-- InnerClass
 ```
 
 ## Complete Examples
