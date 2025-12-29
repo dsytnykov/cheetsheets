@@ -288,17 +288,17 @@ classDiagram
         -int outerField
         +void outerMethod()
     }
-    class OuterClassStaticNestedClass {
+    class StaticNestedClass {
         -int nestedField
         +void nestedMethod()
     }
-    class OuterClassInnerClass {
+    class InnerClass {
         -int innerField
         +void innerMethod()
     }
 
-    OuterClass +-- OuterClassStaticNestedClass
-    OuterClass +-- OuterClassInnerClass
+    OuterClass +.. StaticNestedClass : static nested
+    OuterClass +-- InnerClass : inner
 ```
 
 ## Complete Examples
