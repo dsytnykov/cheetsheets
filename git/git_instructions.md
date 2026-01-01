@@ -1,7 +1,8 @@
-.gi# Git instructions
+# Git instructions
 
 ## Basic commands
 
+```git
 - git status
 - git add .
 - git add -p index.html - can choose what to add to commit from file
@@ -9,6 +10,7 @@
 - git commit -am "message" - commit when a file from repo modified (no new files added)
 - git commit --amend -m "Edited message" - edit message for the last local commit (only for unpushed changes or EXTREMELLY carefully)
 - git commit --amend --no-edit - add new files without editing message in last local commit (only for unpushed changes or EXTREMELLY carefully)
+```
 
 **Add new files without editing message in last local commit**
 
@@ -16,7 +18,9 @@
 git add .
 git commit --amend --no-edit
 ```
+
 ## Getting changes
+
 ```git
 git pull --rebase - if works, you are done. If you have conflicts
 git rebase --abort
@@ -198,12 +202,31 @@ during interective rebase choose for commit 'drop'
 
 ## Stash
 
+```git
 - git stash -help - all necessary info about stash
 - git stash list - shows all stashes
-- git stash
-- git stash pop
+- git stash - stash the changes
+- git stash pop - apply the last stash and remove it from the queue
 - git stash apply stash@{0} - apply stash
 - git stash pop stash@{0} - apply stash and remove it
+```
+
+## Worktree
+
+- you can have multiple branches checked out at the same time in different folders without stashing, without juggling.
+- the different branches can be opened in different windows
+- each folder (wokrtree) is a separate repository, as we just cloned it, so we can do changes commit it and push independetly
+- if the branch is opened in one of the worktree you can't switch on this branch from others folders
+- it copies only the working directories but .git with the history is the same for all worktrees
+
+```git
+git worktree add -b new-branch ../feature-new - it creates a new branch and a new folder with project (feature-new on the same level with our project)
+git worktree add ../feature-new old-branch - it creates a new folder and switch it to an existing branch
+
+git worktree list - it shows all existing worktree
+
+git remove ../feature-new - it removes an existing worktree (folder) when the work is done
+```
 
 ## Patch
 
@@ -233,15 +256,15 @@ git apply --verbose file.patch - The -v or --verbose will show what failed, if a
 
 ## Bisect
 
-- allows to find the commit that introduced a bug 
+- allows to find the commit that introduced a bug
 
 ```git
 git bisect start
 git bisect bad
-git bisect good <commit_id> 
+git bisect good <commit_id>
 git bisect reset
 
-git show <commit_id> 
+git show <commit_id>
 ```
 
 ## Submodules
