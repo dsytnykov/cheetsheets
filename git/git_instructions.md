@@ -56,6 +56,7 @@ git switch main
 git switch - //switch to previous branch
 git switch -c new-branch //create and switch to new branch
 git switch -c new-branch origin/remote-branch //create and switch to new branch from remote
+git switch -c hotfix <commit-id> // create a branch from another commit
 ```
 
 - git push origin branchName - if local and remote branches have the same name
@@ -95,7 +96,9 @@ git switch -c new-branch origin/remote-branch //create and switch to new branch 
 - git restore <filename> - discarding all local changes (not commited) in a file or recover removed file
 - git restore -p <filename> - discarding chunks/lines in a file
 - git restore . - discarding all local changes
+- git restore --staged file.txt //unstage file
 - git restore --source <commit_id> <filename> - resetting file to an old revision
+- git restore --staged --worktree file.txt // restore both index and working tree
 
 **Revert**
 
