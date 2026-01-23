@@ -72,6 +72,10 @@ git switch -c hotfix <commit-id> // create a branch from another commit
 
 - git diff file_specific - shows differences before changes and after
 - git diff <commit_id> - shows changes in specific commit
+- git show --name-only --pretty="" - shows file names in the last commit
+- git diff --name-only HEAD~1 HEAD - the same that previous one
+- git show - shows files and what was changed
+- git show --stat - concise summary (files + counts)
 
 ## Undoing changes
 
