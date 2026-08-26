@@ -1,0 +1,25 @@
+# Load all .sh files from ~/.bash/ directory (where you can hold custom scripts)
+if [ -d ~/.bash ]; then
+    for file in ~/.bash/*.sh; do
+        if [ -f "$file" ]; then
+            source "$file"
+        fi
+    done
+fi
+
+// if your need it
+export JAVA_HOME="/c/Program Files/Java/jdk-17"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+# Use Windows ssh
+export GIT_SSH_CMD="/c/Windows/System32/OpenSSH/ssh.exe"
+git config --global core.sshCommand "$GIT_SSH_CMD"
+
+
+# Increase history size
+HISTSIZE=10000
+HISTFILESIZE=20000
+HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+
+PROMPT_COMMAND='history -a; history -n'
